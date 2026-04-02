@@ -1,11 +1,12 @@
 import math
+from config import ANGLE_TOLERANCE, DIST_TOLERANCE
 
 def movement_command(robot_coordinates, target_coordinates, robot_angle, stage):
     x_robot, y_robot = robot_coordinates
     x_target, y_target = target_coordinates
 
-    tolerance_angle = 15  
-    tolerance_dist = 30    
+    tolerance_angle = ANGLE_TOLERANCE
+    tolerance_dist = DIST_TOLERANCE  
 
     dx = x_target - x_robot
     dy = y_target - y_robot
